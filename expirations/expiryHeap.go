@@ -5,12 +5,6 @@ type ExpirationHeap struct {
 	tree []Expiree
 }
 
-//interfaces
-type Expirer interface {
-	Push(x Expiree)
-	Pop() []uint
-}
-
 //interface implementations
 
 func (e *ExpirationHeap) Push(x Expiree) {

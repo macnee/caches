@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/macnee/caches/expirations"
 	"time"
+	"github.com/snuffalo/caches/expirations"
 )
 
 func main() {
