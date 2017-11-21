@@ -18,8 +18,25 @@ func main() {
 
 	a.Push(b)
 	v := a.Pop()
-	fmt.Printf("%v", v)
+	fmt.Printf("%v\n", v)
 
 
 	//more intense memery
+	first := expirations.NewExpirationData(time.Now().Add(time.Hour * 1), []uint{1})
+	second := expirations.NewExpirationData(time.Now().Add(time.Hour * 5), []uint{2})
+	third := expirations.NewExpirationData(time.Now().Add(time.Hour * 2), []uint{3})
+	fourth := expirations.NewExpirationData(time.Now().Add(time.Hour* 7), []uint{4})
+	fifth := expirations.NewExpirationData(time.Now().Add(time.Hour * 5), []uint{5})
+
+	a.Push(&first)
+	a.Push(&second)
+	a.Push(&third)
+	a.Push(&fourth)
+	a.Push(&fifth)
+
+	fmt.Printf("%v", a.Pop())
+	fmt.Printf("%v", a.Pop())
+	fmt.Printf("%v", a.Pop())
+	fmt.Printf("%v", a.Pop())
+
 }
